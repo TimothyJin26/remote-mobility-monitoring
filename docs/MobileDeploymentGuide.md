@@ -65,8 +65,7 @@ cd iOS
 
 ### Configure AWS Amplify for Cognito authentication
 
-- Please set up Amplify for our app following these steps: [Amplify Set Up](https://docs.amplify.aws/lib/project-setup/prereq/q/platform/ios/)
-- Make sure to save the `accessKeyId` and `secretAccessKey`
+- Please set up an Amplify profile for our app following these steps: [Amplify Set Up](https://docs.amplify.aws/lib/project-setup/prereq/q/platform/ios/)
 
 ```bash
 # Make sure to finish the Amplify Set Up guide above before proceeding
@@ -74,11 +73,14 @@ cd iOS
 cd iOS
 
 amplify init
-# Choose AWS access keys for auth method
+# Select the default name and editor
+# Choose AWS profile for authentication
+# Select us-west-2 for region
 # Choose the user pool you created in the Backend Deployment above
 
 amplify remove auth # Remove our existing auth
-amplify add auth  # Adding your own auth with Cognito
+amplify import auth  # Adding your own auth with Cognito
+# Choose the user pool you created in the Backend Deployment above
 amplify push  # Push the changes to AWS
 ```
 
