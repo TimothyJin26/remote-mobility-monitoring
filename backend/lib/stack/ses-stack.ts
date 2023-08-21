@@ -9,7 +9,7 @@ export class SesStack extends cdk.Stack {
 
     const sesName = 'RemoteMobilityMonitoringSes';
     this.senderEmailIdentity = new ses.EmailIdentity(this, sesName, {
-      identity: ses.Identity.email('mobimonemail@gmail.com'),
+      identity: ses.Identity.email('[YOUR_SES_SENDER_EMAIL]'),
     });
   }
 }
