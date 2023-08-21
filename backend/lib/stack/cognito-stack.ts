@@ -9,7 +9,7 @@ interface CognitoStackProps extends cdk.StackProps {
 export class CognitoStack extends cdk.Stack {
   private static CALLBACK_URLS = ['https://example.com/callback'];
   private static LOGOUT_URLS = ['https://example.com/logout'];
-  private static DOMAIN_PREFIX = process.env.COGNITO_DOMAIN_PREFIX || 'mobimon'; // Put domain in env when deploying, unless deploying to CIC
+  private static DOMAIN_PREFIX = process.env.COGNITO_DOMAIN_PREFIX || [YOUR_CUSTOM_DOMAIN_PREFIX]; // Put domain in env when deploying, unless deploying to CIC
   public readonly userPool: cognito.UserPool;
   public readonly userPoolClient: cognito.UserPoolClient;
   public readonly userPoolDomain: cognito.UserPoolDomain;
